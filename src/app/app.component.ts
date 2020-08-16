@@ -12,8 +12,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private sub1: Subscription;
   private sub2: Subscription;
-  private leagues: League[];
-  private clubs: Club[];
+  public leagues: League[];
+  public clubs: Club[];
 
   constructor(private service: AppService) {
   }
