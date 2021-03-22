@@ -8,7 +8,7 @@ import { Subject, Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
 
   private sub1: Subscription;
   private sub2: Subscription;
@@ -34,8 +34,4 @@ export class AppComponent implements OnInit, OnDestroy {
       .subscribe(clubs => this.clubs = clubs);
   }
 
-  ngOnDestroy(): void {
-    this.sub1.unsubscribe();
-    this.sub2.unsubscribe();
-  }
 }
